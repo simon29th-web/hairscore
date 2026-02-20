@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Hair Score Studio | Dehradun</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth;}
+body{background:#0b0b0b;color:white;}
+
+/* HEADER */
+header{
+position:fixed;width:100%;background:#000;
+display:flex;justify-content:space-between;align-items:center;
+padding:18px 8%;z-index:1000;
+}
+header h1{color:#d4af37;}
+nav a{color:white;text-decoration:none;margin-left:25px;font-weight:500;}
+nav a:hover{color:#d4af37;}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;flex-direction:column;justify-content:center;align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+url('https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg') center/cover no-repeat;
+animation:fade 2s ease-in-out;
+}
+.hero h2{font-size:3rem;}
+.hero p{margin:20px 0;color:#ccc;}
+.btn{
+background:#d4af37;color:black;padding:12px 30px;
+text-decoration:none;border-radius:5px;font-weight:600;
+}
+
+/* SECTION */
+.section{padding:100px 8%;text-align:center;}
+.section h2{color:#d4af37;margin-bottom:30px;}
+
+/* SERVICES */
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+.card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+border:1px solid rgba(212,175,55,.3);
+border-radius:15px;
+padding:20px;
+transition:.4s;
+}
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 0 25px rgba(212,175,55,.6);
+}
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:10px;
+margin-bottom:15px;
+}
+.card h3{color:#d4af37;margin-bottom:10px;}
+
+/* BOOKING */
+.booking-form{
+max-width:500px;margin:auto;
+display:flex;flex-direction:column;gap:15px;
+}
+.booking-form input,.booking-form select{
+padding:12px;border:none;border-radius:5px;
+}
+.booking-form button{
+padding:12px;background:#d4af37;border:none;
+font-weight:600;border-radius:5px;cursor:pointer;
+}
+
+/* MAP */
+iframe{width:100%;height:300px;border-radius:10px;margin-top:30px;}
+
+footer{background:#000;text-align:center;padding:20px;margin-top:40px;}
+
+.whatsapp{
+position:fixed;bottom:20px;right:20px;
+background:#25D366;color:white;
+padding:15px;border-radius:50%;
+text-decoration:none;font-size:20px;
+}
+.callbtn{
+position:fixed;bottom:20px;left:20px;
+background:#d4af37;color:black;
+padding:15px;border-radius:50%;
+text-decoration:none;font-size:18px;
+}
+
+@keyframes fade{from{opacity:0;}to{opacity:1;}}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>The Hair Score Studio</h1>
+<nav>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#booking">Book</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h2>Look Good. Feel Better. Score High.</h2>
+<p>Premium Boys Grooming Studio | Garhi Cantt, Dehradun</p>
+<a href="#booking" class="btn">Book Appointment</a>
+</section>
+
+<section id="about" class="section">
+<h2>About Us</h2>
+<p>Modern men’s salon offering stylish haircuts, beard shaping & premium grooming experience at affordable prices.</p>
+</section>
+
+<section id="services" class="section">
+<h2>Our Services</h2>
+<div class="services">
+
+<div class="card">
+<img src="https://images.pexels.com/photos/897262/pexels-photo-897262.jpeg">
+<h3>Modern Haircut</h3>
+<p>Fade, Undercut & Trendy Styles</p>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/1319461/pexels-photo-1319461.jpeg">
+<h3>Beard Styling</h3>
+<p>Sharp & Clean Beard Finish</p>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/3993133/pexels-photo-3993133.jpeg">
+<h3>Hair Wash & Styling</h3>
+<p>Professional Styling Finish</p>
+</div>
+
+<div class="card">
+<img src="https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg">
+<h3>Luxury Interior</h3>
+<p>Premium Black & Gold Ambience</p>
+</div>
+
+</div>
+</section>
+
+<section id="booking" class="section">
+<h2>Book Appointment</h2>
+<form class="booking-form" onsubmit="sendToWhatsApp(); return false;">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="tel" id="phone" placeholder="Phone Number" required>
+<select id="service" required>
+<option value="">Select Service</option>
+<option>Haircut</option>
+<option>Beard Styling</option>
+<option>Hair Wash</option>
+</select>
+<input type="date" id="date" required>
+<button type="submit">Confirm Booking</button>
+</form>
+</section>
+
+<section id="contact" class="section">
+<h2>Contact</h2>
+<p>📍 Tapkeshvar, Garhi Cantt, Dehradun</p>
+<p>📞 8439108106</p>
+
+<iframe src="https://maps.google.com/maps?q=Garhi%20Cantt%20Dehradun&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+</section>
+
+<footer>
+<p>© 2026 The Hair Score Studio | Dehradun</p>
+</footer>
+
+<a href="https://wa.me/918439108106" class="whatsapp" target="_blank">💬</a>
+<a href="tel:8439108106" class="callbtn">📞</a>
+
+<script>
+function sendToWhatsApp(){
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+  var service = document.getElementById("service").value;
+  var date = document.getElementById("date").value;
+
+  var message = "Hello, I want to book an appointment.%0A"
+              + "Name: " + name + "%0A"
+              + "Phone: " + phone + "%0A"
+              + "Service: " + service + "%0A"
+              + "Date: " + date;
+
+  window.open("https://wa.me/918439108106?text=" + message, "_blank");
+}
+</script>
+
+</body>
+</html>
